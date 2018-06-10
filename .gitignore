@@ -1,0 +1,7 @@
+venv/
+.idea
+app/.idea
+app/*.pyc
+uwsgi.*
+app/uwsgi.*
+app/main/*.pyc

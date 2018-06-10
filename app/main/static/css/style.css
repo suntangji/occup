@@ -1,0 +1,51 @@
+/*body {
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+} */
+
+.modal-backdrop {
+  opacity: 0 !important;
+  filter: alpha(opacity=0) !important;
+}
+
+
+@media (max-width: 768px) {
+    /*在小于768像素的屏幕里,这里的样式才生效*/
+  .modal-style {
+    /*width: 25%;*/
+    margin-top: 50%
+  }
+  #outer_div {
+    margin-top: 30%;
+  }
+  #myTab {
+    margin: 0 auto;
+    width: 80%
+  }
+
+
+}
+@media (min-width: 769px) {
+
+  .modal-style {
+      width: 25%;
+      margin-top: 13%
+    }
+    #outer_div {
+      width: 50%;
+      margin-top: 8%;
+    }
+    #myTab {
+      margin: 0 auto;
+      width: 40%
+    }
+    #bin {
+    width: 50%;
+    margin: 0 auto;
+}
+}
+
+
+

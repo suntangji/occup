@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url_for('static',filename = 'css/style.css',_external = True)}}" rel="stylesheet">
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="bin">
+<br>
+    <table class="table table-bordered table-hover">
+    <p align="center">选座情况</p>
+<!-- On cells (`td` or `th`) -->
+        <th>
+            编号
+            <td>用户id</td>
+            <td>桌子编号</td>
+            <td>暂离时间</td>
+             <td>占用时刻</td>
+        </th>
+        {% for i in range(len) %}
+            <tr>
+                <td>{{i+1}}</td>
+                {% for j in range(4) %}
+                {% if j == 1 %}
+                    {% if occup[i][j] <= 9 %}
+                  <td class="active">1楼{{occup[i][j]}}号</td>
+                    {%endif%}
+                 {% if occup[i][j] == 10 %}
+                  <td class="active">1楼10号</td>
+                    {%endif%}
+                    {% if 10 < occup[i][j] <= 19 %}
+                  <td class="active">2楼{{occup[i][j]%10}}号</td>
+                    {%endif%}
+                {% if occup[i][j] == 20 %}
+                  <td class="active">2楼10号</td>
+                    {%endif%}
+                 {% if 20 < occup[i][j] <= 29%}
+                  <td class="active">3楼{{occup[i][j]%10}}号</td>
+                    {% endif %}
+                {% if occup[i][j] == 30 %}
+                  <td class="active">3楼10号</td>
+                    {%endif%}
+                 {% if 30 < occup[i][j] <= 39 %}
+                  <td class="active">4楼{{occup[i][j]%10}}号</td>
+                    {%endif%}
+                {% if occup[i][j] == 40 %}
+                  <td class="active">4楼10号</td>
+                    {%endif%}
+                {% else %}
+                 <td class="active">{{occup[i][j]}}</td>
+                {% endif %}
+                {%  endfor %}
+            </tr>
+        {%  endfor %}
+    </table>
+<script>
+
+</script>
+</body>
+
+</html>
