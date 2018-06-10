@@ -5,6 +5,6 @@ class Config(object):
     SECRET_KEY = 'some secret words'
     DEBUG = True
 
-    SQLALCHEMY_DATABASE_URI = 'mysql://username:password@localhost/database'
+    SQLALCHEMY_DATABASE_URI = 'mysql://suntangji:tangji110@suntangji.me/occup2'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
