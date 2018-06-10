@@ -5,3 +5,4 @@ app/*.pyc
 uwsgi.*
 app/uwsgi.*
 app/main/*.pyc
+app/config.py
